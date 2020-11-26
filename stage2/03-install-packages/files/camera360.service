@@ -1,0 +1,15 @@
+[Unit]
+Description=Camera360 startup script
+
+[Service]
+ExecStart=/usr/local/bin/camera360pi
+User=pi
+StandardOutput=syslog+console
+StandardError=syslog+console
+TTYPath=/dev/tty1
+SyslogIdentifier=camera360
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
